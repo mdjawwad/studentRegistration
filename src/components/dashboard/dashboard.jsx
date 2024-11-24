@@ -7,14 +7,12 @@ import {
   addRecord,
   updateRecord,
   deleteRecord,
-} from "../service/dashboardService";
+} from "../../service/dashboardService";
 
 function Dashboard() {
   const [records, setRecords] = useState([]);
   const [name, setName] = useState("");
-
   const [joinDate, setJoinDate] = useState("");
-
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [editIndex, setEditIndex] = useState(-1);
@@ -110,7 +108,7 @@ function Dashboard() {
   };
 
   return (
-    <div className="container">
+    <div className="dash-container">
       <div className="top">
         <h1>Student Registration</h1>
         <form id="record-form" onSubmit={handleSubmit}>
